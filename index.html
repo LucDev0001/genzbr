@@ -86,8 +86,15 @@
 
       /* Animação de Atenção */
       @keyframes attention {
-        0%, 100% { color: inherit; text-shadow: none; }
-        50% { color: #FF0000; text-shadow: 0 0 10px #FF0000; }
+        0%,
+        100% {
+          color: inherit;
+          text-shadow: none;
+        }
+        50% {
+          color: #ff0000;
+          text-shadow: 0 0 10px #ff0000;
+        }
       }
       .animate-attention {
         animation: attention 1.5s infinite;
@@ -96,8 +103,12 @@
 
       /* Marquee Animation */
       @keyframes marquee {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
       }
       .animate-marquee {
         display: inline-block;
@@ -108,95 +119,153 @@
   <body class="overflow-x-hidden min-h-screen">
     <!-- HERO SECTION -->
     <section
-      class="relative flex flex-col items-center justify-center min-h-screen px-4 py-12 text-center border-b border-neonGreen/30"
+      class="relative flex flex-col items-center justify-center min-h-screen px-4 py-20 text-center border-b border-neonGreen/30 overflow-hidden"
     >
       <div
         class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-black via-neonGreen to-black opacity-50"
       ></div>
 
-      <div class="mb-6 animate-fade-in-down">
-        <img src="midias/logo.jpeg" alt="Logo Geração Z" class="w-24 h-24 mx-auto mb-4 object-contain drop-shadow-[0_0_15px_rgba(0,255,0,0.3)]" />
+      <div class="mb-8 animate-fade-in-down relative z-10">
+        <img
+          src="midias/logo.jpeg"
+          alt="Logo Geração Z"
+          class="w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 object-contain drop-shadow-[0_0_25px_rgba(0,255,0,0.4)]"
+        />
         <h1
-          class="text-5xl md:text-7xl font-black tracking-tighter mb-2 text-white drop-shadow-[0_0_10px_rgba(0,255,0,0.5)]"
+          class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 text-white drop-shadow-[0_0_15px_rgba(0,255,0,0.6)]"
         >
           <span class="glitch-text">02/02</span>
         </h1>
         <h2
-          class="text-2xl md:text-4xl font-bold text-gold uppercase tracking-widest"
+          class="text-3xl md:text-5xl font-bold text-gold uppercase tracking-widest drop-shadow-md"
         >
           O GRANDE DIA
         </h2>
       </div>
 
-      <p class="text-lg md:text-xl mb-8 max-w-2xl text-gray-300">
+      <p
+        class="text-xl md:text-2xl mb-12 max-w-3xl text-gray-300 leading-relaxed"
+      >
         Geração Z nas Ruas.
-        <span class="text-bloodRed font-bold"
+        <span class="text-bloodRed font-bold bg-black/50 px-2"
           >O silêncio sustenta a corrupção.</span
         >
       </p>
 
       <!-- Imagem de Destaque -->
       <div
-        class="w-full max-w-md aspect-video bg-gray-900 border-2 border-gold rounded-lg mb-10 relative overflow-hidden group shadow-[0_0_15px_rgba(255,215,0,0.3)]"
+        class="w-full max-w-5xl aspect-video bg-gray-900 border-4 border-gold rounded-xl mb-12 relative overflow-hidden group shadow-[0_0_30px_rgba(255,215,0,0.4)] hover:shadow-[0_0_50px_rgba(255,215,0,0.6)] transition-all duration-500"
       >
-        <img src="midias/bandeira.jpg" alt="Bandeira" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+        <img
+          src="midias/bandeira.jpg"
+          alt="Bandeira"
+          class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"
+        ></div>
       </div>
 
       <!-- Contador -->
       <div
-        class="grid grid-cols-4 gap-4 text-neonGreen border border-neonGreen p-4 rounded bg-black/50 backdrop-blur-sm shadow-[0_0_15px_rgba(0,255,0,0.2)]"
+        class="grid grid-cols-4 gap-4 md:gap-8 text-neonGreen border-2 border-neonGreen p-6 md:p-8 rounded-xl bg-black/60 backdrop-blur-md shadow-[0_0_25px_rgba(0,255,0,0.3)] max-w-4xl w-full"
       >
         <div class="flex flex-col items-center">
-          <span id="days" class="text-2xl md:text-4xl font-bold">00</span>
+          <span id="days" class="text-3xl md:text-6xl font-black">00</span>
           <span class="text-xs md:text-sm text-gray-500">DIAS</span>
         </div>
         <div class="flex flex-col items-center">
-          <span id="hours" class="text-2xl md:text-4xl font-bold">00</span>
+          <span id="hours" class="text-3xl md:text-6xl font-black">00</span>
           <span class="text-xs md:text-sm text-gray-500">HRS</span>
         </div>
         <div class="flex flex-col items-center">
-          <span id="minutes" class="text-2xl md:text-4xl font-bold">00</span>
+          <span id="minutes" class="text-3xl md:text-6xl font-black">00</span>
           <span class="text-xs md:text-sm text-gray-500">MIN</span>
         </div>
         <div class="flex flex-col items-center">
-          <span id="seconds" class="text-2xl md:text-4xl font-bold">00</span>
+          <span id="seconds" class="text-3xl md:text-6xl font-black">00</span>
           <span class="text-xs md:text-sm text-gray-500">SEG</span>
         </div>
       </div>
     </section>
 
     <!-- REALIDADE / CONTEXTO (DADOS DO SISTEMA) -->
-    <section class="py-8 bg-black border-b border-gray-800 overflow-hidden relative">
-      <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
+    <section
+      class="py-8 bg-black border-b border-gray-800 overflow-hidden relative"
+    >
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background-image: url(&quot;https://www.transparenttextures.com/patterns/carbon-fibre.png&quot;);
+        "
+      ></div>
       <div class="max-w-6xl mx-auto px-4 relative z-10">
-           <div class="flex items-center justify-center gap-2 mb-6">
-              <i data-lucide="alert-octagon" class="text-bloodRed animate-pulse"></i>
-              <h3 class="text-center text-bloodRed font-bold tracking-widest">SISTEMA COMPROMETIDO</h3>
-              <i data-lucide="alert-octagon" class="text-bloodRed animate-pulse"></i>
-           </div>
-           
-           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-8">
-               <div class="border border-gray-800 p-4 bg-gray-900/50 backdrop-blur hover:border-bloodRed transition-colors group">
-                   <h4 class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform">R$ 4,9 BI</h4>
-                   <p class="text-gray-400 text-xs uppercase mt-1">Fundo Eleitoral (Enquanto falta remédio)</p>
-               </div>
-               <div class="border border-gray-800 p-4 bg-gray-900/50 backdrop-blur hover:border-bloodRed transition-colors group">
-                   <h4 class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform">TOP 10</h4>
-                   <p class="text-gray-400 text-xs uppercase mt-1">Países mais desiguais do mundo</p>
-               </div>
-               <div class="border border-gray-800 p-4 bg-gray-900/50 backdrop-blur hover:border-bloodRed transition-colors group">
-                   <h4 class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform">CENSURA</h4>
-                   <p class="text-gray-400 text-xs uppercase mt-1">Liberdade digital sob vigilância</p>
-               </div>
-           </div>
+        <div class="flex items-center justify-center gap-2 mb-6">
+          <i
+            data-lucide="alert-octagon"
+            class="text-bloodRed animate-pulse"
+          ></i>
+          <h3 class="text-center text-bloodRed font-bold tracking-widest">
+            SISTEMA COMPROMETIDO
+          </h3>
+          <i
+            data-lucide="alert-octagon"
+            class="text-bloodRed animate-pulse"
+          ></i>
+        </div>
 
-           <!-- Marquee -->
-           <div class="relative overflow-hidden bg-bloodRed/10 border-y border-bloodRed/30 py-2">
-               <div class="animate-marquee whitespace-nowrap text-bloodRed font-mono text-sm font-bold">
-                   +++ ESCÂNDALO: ORÇAMENTO SECRETO DRENA COFRES PÚBLICOS +++ 33 MILHÕES COM FOME +++ DESMATAMENTO ILEGAL BATE RECORDE +++ IMPOSTOS SOBRE CONSUMO SUFOCAM OS MAIS POBRES +++ PRIVILÉGIOS DO JUDICIÁRIO MANTIDOS +++ CORRUPÇÃO SISTÊMICA DETECTADA +++
-               </div>
-           </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-8">
+          <div
+            class="border border-gray-800 p-4 bg-gray-900/50 backdrop-blur hover:border-bloodRed transition-colors group"
+          >
+            <h4
+              class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform"
+            >
+              R$ 4,9 BI
+            </h4>
+            <p class="text-gray-400 text-xs uppercase mt-1">
+              Fundo Eleitoral (Enquanto falta remédio)
+            </p>
+          </div>
+          <div
+            class="border border-gray-800 p-4 bg-gray-900/50 backdrop-blur hover:border-bloodRed transition-colors group"
+          >
+            <h4
+              class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform"
+            >
+              TOP 10
+            </h4>
+            <p class="text-gray-400 text-xs uppercase mt-1">
+              Países mais desiguais do mundo
+            </p>
+          </div>
+          <div
+            class="border border-gray-800 p-4 bg-gray-900/50 backdrop-blur hover:border-bloodRed transition-colors group"
+          >
+            <h4
+              class="text-gold font-bold text-2xl group-hover:scale-110 transition-transform"
+            >
+              CENSURA
+            </h4>
+            <p class="text-gray-400 text-xs uppercase mt-1">
+              Liberdade digital sob vigilância
+            </p>
+          </div>
+        </div>
+
+        <!-- Marquee -->
+        <div
+          class="relative overflow-hidden bg-bloodRed/10 border-y border-bloodRed/30 py-2"
+        >
+          <div
+            class="animate-marquee whitespace-nowrap text-bloodRed font-mono text-sm font-bold"
+          >
+            +++ ESCÂNDALO: ORÇAMENTO SECRETO DRENA COFRES PÚBLICOS +++ 33
+            MILHÕES COM FOME +++ DESMATAMENTO ILEGAL BATE RECORDE +++ IMPOSTOS
+            SOBRE CONSUMO SUFOCAM OS MAIS POBRES +++ PRIVILÉGIOS DO JUDICIÁRIO
+            MANTIDOS +++ CORRUPÇÃO SISTÊMICA DETECTADA +++
+          </div>
+        </div>
       </div>
     </section>
 
@@ -286,7 +355,9 @@
     <section class="px-4 py-16 bg-black border-b border-neonGreen/30">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-10">
-          <h2 class="text-3xl font-bold text-gold mb-2 uppercase tracking-widest">
+          <h2
+            class="text-3xl font-bold text-gold mb-2 uppercase tracking-widest"
+          >
             📌 ESTEJAM PREPARADOS
           </h2>
           <p class="text-gray-400">O que levar e como se vestir</p>
@@ -295,37 +366,63 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Vestimenta -->
           <div class="bg-gray-900/50 p-6 rounded border border-neonGreen/30">
-            <h3 class="text-xl font-bold text-neonGreen mb-4 flex items-center gap-2">
+            <h3
+              class="text-xl font-bold text-neonGreen mb-4 flex items-center gap-2"
+            >
               👕 VESTIMENTA PADRÃO
             </h3>
             <ul class="space-y-3 text-gray-300">
-              <li><strong class="text-white">🎭 Máscara Anonymous:</strong> Identidade coletiva, proteção e símbolo.</li>
-              <li><strong class="text-white">👕 Camisa/Blusa Neutra:</strong> Sem estampas extras.</li>
-              <li><strong class="text-white">👖 Calça Confortável:</strong> Jogger, tactel ou moletom (mobilidade).</li>
-              <li><strong class="text-white">👟 Tênis Fechado:</strong> Nada de sandálias.</li>
-              <li><strong class="text-white">🎒 Mochila:</strong> Para itens essenciais.</li>
+              <li>
+                <strong class="text-white">🎭 Máscara Anonymous:</strong>
+                Identidade coletiva, proteção e símbolo.
+              </li>
+              <li>
+                <strong class="text-white">👕 Camisa/Blusa Neutra:</strong> Sem
+                estampas extras.
+              </li>
+              <li>
+                <strong class="text-white">👖 Calça Confortável:</strong>
+                Jogger, tactel ou moletom (mobilidade).
+              </li>
+              <li>
+                <strong class="text-white">👟 Tênis Fechado:</strong> Nada de
+                sandálias.
+              </li>
+              <li>
+                <strong class="text-white">🎒 Mochila:</strong> Para itens
+                essenciais.
+              </li>
             </ul>
           </div>
 
           <!-- Itens Essenciais -->
           <div class="bg-gray-900/50 p-6 rounded border border-neonGreen/30">
-            <h3 class="text-xl font-bold text-neonGreen mb-4 flex items-center gap-2">
+            <h3
+              class="text-xl font-bold text-neonGreen mb-4 flex items-center gap-2"
+            >
               🎒 ITENS ESSENCIAIS (NA MOCHILA)
             </h3>
             <ul class="space-y-3 text-gray-300">
-              <li class="animate-attention">💧 Garrafa de água (Hidratação constante)</li>
+              <li class="animate-attention">
+                💧 Garrafa de água (Hidratação constante)
+              </li>
               <li class="animate-attention">🪪 Documentos Pessoais (RG/CNH)</li>
               <li>🍫 Barra de cereal/alimento rápido</li>
               <li class="flex flex-wrap items-center gap-1">
                 <span>📱</span>
-                <button onclick="openModal('securityModal')" class="underline decoration-neonGreen hover:text-neonGreen hover:bg-neonGreen/10 px-1 rounded transition-colors text-left font-bold">
+                <button
+                  onclick="openModal('securityModal')"
+                  class="underline decoration-neonGreen hover:text-neonGreen hover:bg-neonGreen/10 px-1 rounded transition-colors text-left font-bold"
+                >
                   Celular (CLIQUE P/ SEGURANÇA DIGITAL)
                 </button>
                 <span>+ 🔋 Power bank</span>
               </li>
               <li>😷 Máscara reserva (simples ou pano)</li>
               <li>🧻 Lenço de papel/papel higiênico</li>
-              <li class="text-gold text-sm mt-2">⚠️ Recomendados: Boné/Capuz e Medicamentos pessoais.</li>
+              <li class="text-gold text-sm mt-2">
+                ⚠️ Recomendados: Boné/Capuz e Medicamentos pessoais.
+              </li>
             </ul>
           </div>
         </div>
@@ -342,10 +439,14 @@
               <li>🧦 Meias extras</li>
               <li>🧥 Casaco leve/corta-vento</li>
             </ul>
-            <div class="flex-1 border-l border-gray-700 pl-0 md:pl-6 mt-4 md:mt-0">
+            <div
+              class="flex-1 border-l border-gray-700 pl-0 md:pl-6 mt-4 md:mt-0"
+            >
               <p class="text-sm text-gray-400 italic">
-                <strong class="text-white not-italic">👉 POR QUÊ?</strong><br>
-                A manifestação pode durar horas. Suor, chuva ou necessidade de troca rápida. Permanecer nas ruas sem perder praticidade ou saúde.
+                <strong class="text-white not-italic">👉 POR QUÊ?</strong><br />
+                A manifestação pode durar horas. Suor, chuva ou necessidade de
+                troca rápida. Permanecer nas ruas sem perder praticidade ou
+                saúde.
               </p>
             </div>
           </div>
@@ -354,7 +455,9 @@
         <!-- Orientações e Mentalidade -->
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-gray-900/50 p-6 rounded border border-gold/30">
-            <h3 class="text-lg font-bold text-gold mb-2">⚠️ ORIENTAÇÕES GERAIS</h3>
+            <h3 class="text-lg font-bold text-gold mb-2">
+              ⚠️ ORIENTAÇÕES GERAIS
+            </h3>
             <ul class="text-gray-300 space-y-1 text-sm">
               <li>Andem sempre em grupo! Não se isolem!</li>
               <li>Compartilhem água e comida!</li>
@@ -362,10 +465,18 @@
               <li>Ninguém fica para trás!</li>
             </ul>
           </div>
-          <div class="bg-gray-900/50 p-6 rounded border border-neonGreen/30 flex flex-col justify-center text-center">
-            <h3 class="text-lg font-bold text-neonGreen mb-2">🧠 MENTALIDADE</h3>
-            <p class="text-white font-bold text-xl tracking-widest">DISCIPLINA. UNIÃO. RESISTÊNCIA.</p>
-            <p class="text-gray-400 text-xs mt-2">Não é sobre estética. É sobre permanecer. 🥷🇧🇷🏴‍☠️💥</p>
+          <div
+            class="bg-gray-900/50 p-6 rounded border border-neonGreen/30 flex flex-col justify-center text-center"
+          >
+            <h3 class="text-lg font-bold text-neonGreen mb-2">
+              🧠 MENTALIDADE
+            </h3>
+            <p class="text-white font-bold text-xl tracking-widest">
+              DISCIPLINA. UNIÃO. RESISTÊNCIA.
+            </p>
+            <p class="text-gray-400 text-xs mt-2">
+              Não é sobre estética. É sobre permanecer. 🥷🇧🇷🏴‍☠️💥
+            </p>
           </div>
         </div>
       </div>
@@ -419,6 +530,27 @@
         >
           #GeraçãoZNasRuas
         </div>
+
+        <!-- Share Buttons -->
+        <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
+          <a
+            id="shareWhatsapp"
+            href="#"
+            target="_blank"
+            class="flex items-center justify-center gap-2 bg-[#25D366] text-black font-bold py-3 px-6 rounded hover:brightness-110 transition-all uppercase"
+          >
+            <i data-lucide="message-circle"></i> Convocar no WhatsApp
+          </a>
+          <a
+            id="shareTwitter"
+            href="#"
+            target="_blank"
+            class="flex items-center justify-center gap-2 bg-[#1DA1F2] text-white font-bold py-3 px-6 rounded hover:brightness-110 transition-all uppercase"
+          >
+            <i data-lucide="twitter"></i> Convocar no Twitter
+          </a>
+        </div>
+
         <p class="mt-8 text-xs text-gray-700 font-mono">
           Este site é descentralizado. A liberdade não tem dono.
         </p>
@@ -426,25 +558,76 @@
     </footer>
 
     <!-- MODAL SEGURANÇA DIGITAL -->
-    <div id="securityModal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="if(event.target === this) closeModal('securityModal')">
-      <div class="bg-gray-900 border-2 border-neonGreen max-w-lg w-full p-6 rounded relative shadow-[0_0_30px_rgba(0,255,0,0.2)] animate-fade-in-down">
-          <button onclick="closeModal('securityModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i data-lucide="x"></i></button>
-          
-          <h3 class="text-2xl font-bold text-neonGreen mb-6 flex items-center gap-2 border-b border-neonGreen/30 pb-2">
-            <i data-lucide="lock"></i> PROTOCOLO DIGITAL
-          </h3>
-          
-          <ul class="space-y-4 text-gray-300 text-sm">
-              <li class="flex gap-3"><i data-lucide="fingerprint" class="text-bloodRed shrink-0"></i> <div><strong class="text-white">Desative a Biometria:</strong> Use apenas senha numérica/alfanumérica. A polícia pode forçar seu dedo no sensor, mas não pode forçar sua mente.</div></li>
-              <li class="flex gap-3"><i data-lucide="plane" class="text-gold shrink-0"></i> <div><strong class="text-white">Modo Avião:</strong> Ative antes de chegar ao local para evitar rastreamento por torres de celular (ERBs).</div></li>
-              <li class="flex gap-3"><i data-lucide="camera-off" class="text-neonGreen shrink-0"></i> <div><strong class="text-white">Fotos e Vídeos:</strong> Não filme o rosto de outros manifestantes. Remova metadados antes de postar.</div></li>
-              <li class="flex gap-3"><i data-lucide="message-square" class="text-white shrink-0"></i> <div><strong class="text-white">Apps Seguros:</strong> Use Signal ou Telegram (chats secretos). Evite WhatsApp convencional para dados sensíveis.</div></li>
-              <li class="flex gap-3"><i data-lucide="map-pin-off" class="text-bloodRed shrink-0"></i> <div><strong class="text-white">Localização:</strong> Desative o GPS e o Histórico de Localização do Google.</div></li>
-          </ul>
+    <div
+      id="securityModal"
+      class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm"
+      onclick="if (event.target === this) closeModal('securityModal');"
+    >
+      <div
+        class="bg-gray-900 border-2 border-neonGreen max-w-lg w-full p-6 rounded relative shadow-[0_0_30px_rgba(0,255,0,0.2)] animate-fade-in-down"
+      >
+        <button
+          onclick="closeModal('securityModal')"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white"
+        >
+          <i data-lucide="x"></i>
+        </button>
 
-          <div class="mt-6 pt-4 border-t border-gray-700 text-center">
-            <button onclick="closeModal('securityModal')" class="bg-neonGreen text-black font-bold py-2 px-6 rounded hover:bg-white transition-colors uppercase">Entendido</button>
-          </div>
+        <h3
+          class="text-2xl font-bold text-neonGreen mb-6 flex items-center gap-2 border-b border-neonGreen/30 pb-2"
+        >
+          <i data-lucide="lock"></i> PROTOCOLO DIGITAL
+        </h3>
+
+        <ul class="space-y-4 text-gray-300 text-sm">
+          <li class="flex gap-3">
+            <i data-lucide="fingerprint" class="text-bloodRed shrink-0"></i>
+            <div>
+              <strong class="text-white">Desative a Biometria:</strong> Use
+              apenas senha numérica/alfanumérica. A polícia pode forçar seu dedo
+              no sensor, mas não pode forçar sua mente.
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <i data-lucide="plane" class="text-gold shrink-0"></i>
+            <div>
+              <strong class="text-white">Modo Avião:</strong> Ative antes de
+              chegar ao local para evitar rastreamento por torres de celular
+              (ERBs).
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <i data-lucide="camera-off" class="text-neonGreen shrink-0"></i>
+            <div>
+              <strong class="text-white">Fotos e Vídeos:</strong> Não filme o
+              rosto de outros manifestantes. Remova metadados antes de postar.
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <i data-lucide="message-square" class="text-white shrink-0"></i>
+            <div>
+              <strong class="text-white">Apps Seguros:</strong> Use Signal ou
+              Telegram (chats secretos). Evite WhatsApp convencional para dados
+              sensíveis.
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <i data-lucide="map-pin-off" class="text-bloodRed shrink-0"></i>
+            <div>
+              <strong class="text-white">Localização:</strong> Desative o GPS e
+              o Histórico de Localização do Google.
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-6 pt-4 border-t border-gray-700 text-center">
+          <button
+            onclick="closeModal('securityModal')"
+            class="bg-neonGreen text-black font-bold py-2 px-6 rounded hover:bg-white transition-colors uppercase"
+          >
+            Entendido
+          </button>
+        </div>
       </div>
     </div>
 
@@ -562,18 +745,22 @@
 
       // Modal Functions
       function openModal(id) {
-        document.getElementById(id).classList.remove('hidden');
+        document.getElementById(id).classList.remove("hidden");
         lucide.createIcons(); // Refresh icons inside modal if needed
       }
       function closeModal(id) {
-        document.getElementById(id).classList.add('hidden');
+        document.getElementById(id).classList.add("hidden");
       }
-    </script>
-  </body>
-</html>
 
-      setInterval(updateTimer, 1000);
-      updateTimer();
+      // Share Logic
+      const shareText =
+        "02/02 - O GRANDE DIA. Geração Z nas Ruas. O silêncio sustenta a corrupção. Junte-se a nós! #GeraçãoZNasRuas";
+      const shareUrl = window.location.href;
+
+      document.getElementById("shareWhatsapp").href =
+        `https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`;
+      document.getElementById("shareTwitter").href =
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
     </script>
   </body>
 </html>
