@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>02/02 - O GRANDE DIA</title>
 
+    <!-- Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+
+      // Substitua pelos dados do seu projeto no Firebase Console
+      const firebaseConfig = {
+        apiKey: "AIzaSyDOFkYl6G3vYo2g1Te4ngSkQiURsII4TZk",
+        authDomain: "genz-3a9a0.firebaseapp.com",
+        projectId: "genz-3a9a0",
+        storageBucket: "genz-3a9a0.firebasestorage.app",
+        messagingSenderId: "728013112963",
+        appId: "1:728013112963:web:698404860065736bf6fdb6"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
     <!-- SEO & Meta Tags -->
     <meta
       name="description"
@@ -821,6 +841,11 @@
 
       document.getElementById("shareWhatsapp").href =
         `https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`;
+      document.getElementById("shareTwitter").href =
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    </script>
+  </body>
+</html>
       document.getElementById("shareTwitter").href =
         `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
     </script>
