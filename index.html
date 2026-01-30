@@ -17,7 +17,7 @@
         projectId: "genz-3a9a0",
         storageBucket: "genz-3a9a0.firebasestorage.app",
         messagingSenderId: "728013112963",
-        appId: "1:728013112963:web:698404860065736bf6fdb6"
+        appId: "1:728013112963:web:698404860065736bf6fdb6",
       };
 
       // Initialize Firebase
@@ -72,7 +72,9 @@
     />
 
     <!-- Favicon -->
-    <link rel="icon" href="midias/favicon.ico" />
+    <link rel="icon" href="midias/favicon.ico" sizes="any" />
+    <link rel="icon" href="midias/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="midias/logo.png" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -841,11 +843,6 @@
 
       document.getElementById("shareWhatsapp").href =
         `https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`;
-      document.getElementById("shareTwitter").href =
-        `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
-    </script>
-  </body>
-</html>
       document.getElementById("shareTwitter").href =
         `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
     </script>
