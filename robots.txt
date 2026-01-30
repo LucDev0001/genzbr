@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://genzbr0202.vercel.app/sitemap.xml
